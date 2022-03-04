@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+     <!-- N-1-->
+    const arr = [7, 'z', 'z', 'z', 3, 7, 'z', 7, 'z', 3, 5, 9, 7];
+    const newArr = arr.filter((item, index, arr) => {
+        return index !== arr.indexOf(item) || index !== arr.lastIndexOf(item)
+    });
+    console.log(newArr);
+    console.log(arr);
+
+
+    //    N-2
+
+    let counter = 0;
+    let max = 0;
+    let result = "";
+    for (let i = 0; i < arr.length; i++) {
+
+        for (let j = i; j < arr.length; j++) {
+            if (arr[i] === arr[j]) {
+                counter++;
+            }
+        }if (counter > max) {
+            max = counter;
+            result = arr[i] + " повторяется " + counter + " раз";
+        }
+        counter = 0;
+    }
+    alert(result)
+</script>
+</body>
+</html>

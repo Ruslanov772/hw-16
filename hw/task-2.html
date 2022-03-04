@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    const arr = [1, 4, 7, 5, 2, 3, 6, 7, 12, 2, 1, 7, 2];
+    const removeItem = (callback) => {
+        callback(12, arr);
+    }
+
+    const deletedNumber = (elem, arr) => {
+        let num = arr.indexOf(elem);
+        return arr.splice(num, 1);
+    }
+    console.log(arr);
+    removeItem(deletedNumber)
+    console.log(arr);
+
+</script>
+</body>
+</html>
